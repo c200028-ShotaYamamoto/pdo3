@@ -55,7 +55,7 @@ try{
 <p>データ件数：<?php echo $count;?>件</p>
 
 <div class="container">
-/*  (1)ここに適切な formタグを追加してください  */
+    <form action="edit.php" method="POST" class="row">
 
 <table border=1>
     <tr><th>id</th><th>名前</th><th>メールアドレス</th><th>性別</th><th>選択対象</th></tr>
@@ -76,8 +76,8 @@ try{
         ?>
     </td>
     <td>
-        /*  (2)ここにラジオボタン表示処理を追加して下さい  */
-
+        <input type="radio" name="edit" id="edit" value="<?php echo $row['id'];?>">編集 
+       //↑の内容を次へ持っていっている（この場合userテーブル内容をもっていっている
     </td>
     </tr>
     <?php endforeach; ?>
